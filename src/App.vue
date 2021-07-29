@@ -1,20 +1,47 @@
-<template>
+<template >
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <b-navbar toggleable="sm" type="white" variant="">
+      <b-navbar-brand href="#">
+        <router-link to="/"><img class="logoimg" src="@/assets/diarylogotrans.png" alt="Kitten"></router-link>
+      </b-navbar-brand>
+      <b-nav-text><router-link to="/about" class="navtext">로그인</router-link></b-nav-text>
+    </b-navbar>
     <router-view/>
   </div>
 </template>
 
+
+
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap%27');
+
+.logoimg{
+  height:40px;
+  width:40px;
+  object-fit: scale-down;
+}
+.navtext{
+  font-family: 'Gowun Batang', serif;
+  font-size: 15px;
+  color:#B1B1B1;
+  text-decoration:none;
+}
+
+.navtext:hover{
+  color:#B1B1B1;
+  text-decoration:none;
+}
+#body{
+  color: #B2B8A3;
+  background-color: #000000;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 
 #nav {
